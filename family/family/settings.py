@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'finance.apps.FinanceConfig',
-    'api.apps.ApiConfig'
+    'api.apps.ApiConfig',
+    'frontend.apps.FrontendConfig',
+
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -86,7 +89,7 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': os.getenv('ENGINE'),
-        'NAME': os.getenv('dbaname'),
+        'NAME': os.getenv('dbname'),
         'USER': os.getenv('user'),
         'PASSWORD': os.getenv('password'),
         'HOST': os.getenv('host'),
